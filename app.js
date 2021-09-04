@@ -5,5 +5,11 @@ const loadWord = ()=>{
 
     fetch(URL)
     .then(res => res.json())
-    .then(data => console.log(data[0]))
+    .then(data => dispalyDetails(data[0]))
+}
+
+const dispalyDetails=des=>{
+    document.getElementById('sound')
+    console.log(des.phonetics[0].audio)
+
 }
