@@ -11,5 +11,4 @@ const loadWord = ()=>{
 const dispalyDetails=des=>{
     document.getElementById('sound')
     console.log(des.phonetics[0].audio)
-
 }
