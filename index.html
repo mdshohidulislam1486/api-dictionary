@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    
+    <!-- font awesome link  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Dictionary</title>
 </head>
 <body>
     <h3 class="text-center">Dictionary with IPA </h3>
-
     <!-- find word by search  -->
     <section>
         <div style="min-width:250px;" class="input-group mb-3 w-25 mx-auto">
             <input id='search' type="text" class="form-control" placeholder="search" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <button onclick="loadWord()" class="btn btn-secondary outline-none" type="button" id="search-button"><i class="fas fal-search"></i></button>
+            <button onclick="loadWord()" class="btn btn-secondary outline-none" type="button" id="search-button"><i class="fas fa-search"></i></button>
         </div>
     </section>
 
     <!-- dispay world result  -->
-    <section>
-        <div class='container cursor-pointer'><button id='sound' class="btn border-primary rounded-circle"><i  class="fa fa-volume-up fs-4 text-primary"></i> </button><span class="fs-3">Sample word</span></div>
+    <section class="container">
+        <div class="d-flex justify-content-center align-items-center">
+            <div id='card'class="card text-dark bg-light mb-3 d-flex" style="max-width: 30rem;">
+                    <div class="card-header"><button id='sound' class="btn border-primary rounded-circle"><i  class="fa fa-volume-up text-primary"></i> </button></div>
+                    <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                     </div>
+            </div>
+        </div>
+        <div class='container cursor-pointer'><span class="fs-3">Sample word</span></div>
     </section>
 
     <script src="app.js"></script>

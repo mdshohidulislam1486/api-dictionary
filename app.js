@@ -1,14 +1,34 @@
 const loadWord = ()=>{
     const search = document.getElementById('search');
-    const searchText= search.value;
+    let searchText= search.value;
+    if(search.value = ''){
+        return
+    }
+    search.value= '';
     const URL = (`https://api.dictionaryapi.dev/api/v2/entries/en/${searchText}`)
 
     fetch(URL)
     .then(res => res.json())
-    .then(data => dispalyDetails(data[0]))
+    .then(data => play(data[0])).catch(error =>{
+        console.log(error)
+    })
+    play('')
 }
 
-const dispalyDetails=des=>{
-    document.getElementById('sound')
-    console.log(des.phonetics[0].audio)
+
+
+ const play=des=>{
+    document.getElementById('sound').addEventListener('click', function(){
+    let audio = new Audio(des.phonetics.audio);
+    audio.play();
+    })
+  
+}
+
+const dispalyWord = () =>{
+    const card = document.getElementById('card');
+    const div = document.createElement('div');
+ 
+ 
+    card.appendChild(div)
 }
